@@ -36,6 +36,25 @@ A complete IoT project for detecting smoke using MQ-135 sensor with SMS and call
 └─────────────┘
 ```
 
+## Data Flow
+
+```
+┌──────────────┐     ┌──────────────┐     ┌──────────────┐
+│   MQ-135     │────▶│   Arduino    │────▶│     PC       │
+│   Sensor     │     │   (A0 Pin)  │     │  (COM Port)  │
+└──────────────┘     └──────────────┘     └──────┬───────┘
+                                                  │
+                    ┌──────────────┐              │
+                    │   Twilio     │◀─────────────┘
+                    │ (SMS/Call)   │
+                    └──────────────┘
+                                                  │
+                    ┌──────────────┐              │
+                    │ Excel File   │◀─────────────┘
+                    │   (.xlsx)    │
+                    └──────────────┘
+```
+
 ## Files
 
 - `smoke-detector.py` - Basic smoke detector
