@@ -35,7 +35,6 @@ A complete IoT project for detecting smoke using MQ-135 sensor with SMS and call
 │  (SMS/Call) │
 └─────────────┘
 ```
-| ... | (Analog output) |
 
 ## Files
 
@@ -47,6 +46,18 @@ A complete IoT project for detecting smoke using MQ-135 sensor with SMS and call
 
 ```bash
 pip install pyserial openpyxl twilio
+```
+
+## Configuration
+
+Edit the Python files and replace placeholder credentials:
+
+```python
+TWILIO_ACCOUNT_SID = 'YOUR_ACCOUNT_SID'
+TWILIO_AUTH_TOKEN = 'YOUR_AUTH_TOKEN'
+TWILIO_PHONE_NUMBER = '+1234567890'
+TARGET_PHONE_NUMBER = '+1234567890'
+arduino_port = 'COM4'  # Update to your Arduino port
 ```
 
 ## Usage
